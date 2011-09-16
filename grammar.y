@@ -130,7 +130,6 @@ rule
   # If you don't like indentation you could replace the previous rule with the 
   # following one to seperate blocks w/ curly brackets. You'll also need remove the 
   # indentation magic section in the lexer.
-    # "{" Expressions "}"           { replace = val[1] }
     "{" Expressions "}"           { result = val[1] }
   | "{" NEWLINE 
     Expressions
