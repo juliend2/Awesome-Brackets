@@ -13,6 +13,9 @@ if 1 {
 while true {
   print "infinite loop! ZOMG!"
 }
+
+while true { print("single line") }
+
 print "The End"
 EOS
 
