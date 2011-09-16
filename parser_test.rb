@@ -27,7 +27,7 @@ else {
 }
 
 while true {
-  pass
+  print("infinite loop!")
 }
 
 EOS

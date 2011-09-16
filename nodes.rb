@@ -173,7 +173,6 @@ end
 
 class WhileNode
   def initialize(condition, body)
-    puts condition.inspect, body.inspect
     @condition = condition
     @body = body
   end
