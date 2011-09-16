@@ -7,6 +7,8 @@ if 1:
   if false:
     pass
   print "done!"
+  while true:
+    print "Infinite loop!"
 print "The End"
 EOS
 
