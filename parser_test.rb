@@ -30,6 +30,8 @@ while true {
   print("infinite loop!")
 }
 
+while true { print("single line") }
+
 EOS
 
 p Parser.new.parse(code)
