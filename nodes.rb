@@ -155,7 +155,6 @@ end
 # structures like while, for, loop, etc.
 class IfNode
   def initialize(condition, body, else_body=nil)
-    puts condition.inspect, body.inspect, else_body.inspect
     @condition = condition
     @body = body
     @else_body = else_body
@@ -168,6 +167,22 @@ class IfNode
       @body.eval(context)
     elsif @else_body
       @else_body.eval(context)
+    end
+  end
+end
+
+class WhileNode
+  def initialize(condition, body)
+    puts condition.inspect, body.inspect
+    @condition = condition
+    @body = body
+  end
+  
+  def eval(context)
+    # We turn the condition node into a Ruby value to use Ruby's "if" control 
+    # structure.
+    if @condition.eval(context).ruby_value
+      @body.eval(context)
     end
   end
 end

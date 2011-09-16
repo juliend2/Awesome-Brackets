@@ -23,7 +23,10 @@ if true {
   aw = Awesome.new("brilliant!")
 } 
 else {
-  weird
+  pass
+}
+
+while true {
   pass
 }
 

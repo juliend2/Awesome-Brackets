@@ -9,6 +9,10 @@ if 1 {
   }
   print "done!"
 }
+
+while true {
+  print "infinite loop! ZOMG!"
+}
 print "The End"
 EOS
 

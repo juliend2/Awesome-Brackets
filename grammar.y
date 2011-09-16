@@ -2,6 +2,7 @@ class Parser
 
 # Declare tokens produced by the lexer
 token IF ELSE
+token WHILE
 token DEF
 token CLASS
 token NEWLINE
@@ -49,6 +50,7 @@ rule
   | Assign
   | Def
   | Class
+  | While
   | If
   ;
   
@@ -112,6 +114,11 @@ rule
   # Class definition
   Class:
     CLASS CONSTANT Block          { result = ClassNode.new(val[1], val[2]) }
+  ;
+
+  # While block
+  While:
+    WHILE Expression Block        { result = WhileNode.new(val[1], val[2]) }
   ;
   
   # if and if-else block
